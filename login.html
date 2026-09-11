@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in - PartnerBridge</title>
+
+    <link rel="icon" type="image/png" href="shopify-partners.png">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #071111;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-page {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 8px;
+        }
+
+        .logo {
+            width: 82px;
+            height: 82px;
+            object-fit: contain;
+            margin-bottom: 48px;
+        }
+
+        .login-card {
+            width: 476px;
+            max-width: calc(100% - 30px);
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            min-height: 470px;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            color: #3d5364;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .email-input {
+            width: 100%;
+            height: 42px;
+            border: 1px solid #172f45;
+            border-radius: 9px;
+            padding: 0 12px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .email-input:focus {
+            border: 2px solid #0066ff;
+        }
+
+        .continue-button {
+            width: 100%;
+            height: 44px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 11px;
+            background: #d4d4d4;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin: 25px 0;
+        }
+
+        .divider-line {
+            height: 1px;
+            background: #dedede;
+            flex: 1;
+        }
+
+        .divider span {
+            color: #687078;
+            font-size: 14px;
+        }
+
+        .passkey-button {
+            width: 100%;
+            height: 42px;
+            border: none;
+            border-radius: 8px;
+            background: #f0f0f0;
+            color: #182d3d;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .social-buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 9px;
+        }
+
+        .social-button {
+            height: 44px;
+            border: none;
+            border-radius: 8px;
+            background: #f0f0f0;
+            font-size: 21px;
+            cursor: pointer;
+        }
+
+        .google {
+            color: #4285f4;
+            font-weight: bold;
+        }
+
+        .apple {
+            color: #444;
+            font-size: 23px;
+        }
+
+        .facebook {
+            color: #1877f2;
+            font-weight: bold;
+        }
+
+        .whatsapp {
+            color: #25d366;
+        }
+
+        .register {
+            margin-top: 34px;
+            font-size: 14px;
+            color: #263b4b;
+        }
+
+        .register a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .register a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .login-page {
+                padding-top: 20px;
+            }
+
+            .logo {
+                width: 70px;
+                height: 70px;
+                margin-bottom: 30px;
+            }
+
+            .login-card {
+                padding: 30px 24px;
+                border-radius: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-page">
+
+        <!-- Logo -->
+        <a href="index.html">
+            <img class="shopify-logo" alt="" src="https://shopify-assets.shopifycdn.com/shopifycloud/identity/assets/logo/shopify_icon-3ec3196fc21ccd335e623091378b9da827ad0032b2e987dcd2fe6cfc32cd3c5c.svg"
+            >
+        </a>
+
+        <!-- Login box -->
+        <div class="login-card">
+
+            <h1>Log in</h1>
+
+            <p class="subtitle">
+                Continue to PartnerBridge
+            </p>
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                class="email-input"
+                placeholder="Enter your email"
+            >
+
+            <button
+                class="continue-button"
+                onclick="continueLogin()"
+            >
+                Continue with email
+            </button>
+
+            <div class="divider">
+                <div class="divider-line"></div>
+                <span>or</span>
+                <div class="divider-line"></div>
+            </div>
+
+            <button class="passkey-button">
+                ♙ &nbsp; Sign in with passkey
+            </button>
+
+            <div class="social-buttons">
+
+                <button class="social-button google">
+                    G
+                </button>
+
+                <button class="social-button apple">
+                    
+                </button>
+
+                <button class="social-button facebook">
+                    f
+                </button>
+
+                <button class="social-button whatsapp">
+                    ●
+                </button>
+
+            </div>
+
+            <div class="register">
+                New to PartnerBridge?
+
+                <a href="#">
+                    Get started →
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function continueLogin() {
+            const email = document.getElementById("email").value;
+
+            if (!email) {
+                alert("Please enter your email.");
+                return;
+            }
+
+            alert("Demo login: authentication is not connected yet.");
+        }
+    </script>
+
+</body>
+</html>

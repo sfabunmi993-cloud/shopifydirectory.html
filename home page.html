@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopify Partners - Partner Directory</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="shopify-partners.png">
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+            background: #f3f7f5;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+        a {
+            color: inherit;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .top-header {
+            height: 58px;
+            background: #f7faf8;
+            border-top: 3px solid #91a9d1;
+            border-bottom: 1px solid #cdd3d1;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 12px;
+            gap: 35px;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand {
+            width: 135px;
+            min-width: 135px;
+            display: flex;
+            align-items: center;
+        }
+
+        .brand img {
+            width: 135px;
+            height: auto;
+            display: block;
+        }
+
+
+        /* =====================================================
+           SEARCH
+        ===================================================== */
+
+        .header-search {
+            height: 38px;
+            flex: 1;
+            max-width: 680px;
+
+            border: 1px solid #818a87;
+            border-radius: 25px;
+
+            background: white;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 15px;
+        }
+
+        .search-symbol {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #555f5c;
+        }
+
+        .header-search input {
+            border: none;
+            outline: none;
+            width: 100%;
+
+            font-size: 13px;
+            background: transparent;
+        }
+
+        .header-search input::placeholder {
+            color: #8b9390;
+        }
+
+
+        /* =====================================================
+           LOGIN
+        ===================================================== */
+
+        .login-button {
+            border: none;
+            background: #30434d;
+            color: white;
+
+            padding: 9px 20px;
+
+            border-radius: 25px;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background: #22343d;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        .navigation {
+            height: 52px;
+
+            background: #f7faf8;
+
+            border-bottom: 1px solid #ccd2d0;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 13px;
+
+            gap: 35px;
+        }
+
+        .navigation-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 13px;
+
+            cursor: pointer;
+        }
+
+        .down-arrow {
+            width: 7px;
+            height: 7px;
+
+            border-right: 1px solid #111;
+            border-bottom: 1px solid #111;
+
+            transform: rotate(45deg);
+
+            margin-top: -4px;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 450px;
+
+            background: #f1f6f3;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+
+            padding: 50px 13% 55px;
+
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 550px;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            font-weight: 500;
+
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            line-height: 1.08;
+
+            font-weight: 400;
+
+            letter-spacing: -1.5px;
+
+            margin-bottom: 15px;
+        }
+
+        .hero-description {
+            font-size: 15px;
+            line-height: 1.5;
+
+            color: #69726f;
+
+            max-width: 570px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =====================================================
+           HERO SEARCH
+        ===================================================== */
+
+        .hero-search {
+            width: 400px;
+            max-width: 100%;
+
+            height: 49px;
+
+            background: white;
+
+            border: 1px solid #d0d6d3;
+
+            border-radius: 28px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 18px;
+
+            box-shadow: 0 1px 2px rgba(0,0,0,.03);
+        }
+
+        .hero-search input {
+            width: 100%;
+
+            border: none;
+            outline: none;
+
+            font-size: 13px;
+        }
+
+        .hero-search input::placeholder {
+            color: #8b9390;
+        }
+
+
+        /* =====================================================
+           HERO GRAPHIC
+        ===================================================== */
+
+        .hero-graphic {
+            height: 380px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .graphic-circle {
+            width: 280px;
+            height: 280px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(194,244,117,.35),
+                    rgba(210,239,220,.1) 65%,
+                    transparent 70%
+                );
+
+            position: absolute;
+        }
+
+        .dots {
+            width: 290px;
+            height: 290px;
+
+            position: absolute;
+
+            background-image:
+                radial-gradient(#91aee9 1.7px, transparent 1.7px);
+
+            background-size: 10px 10px;
+
+            border-radius: 50%;
+
+            opacity: .75;
+        }
+
+        .person {
+            width: 92px;
+            height: 92px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            border: 2px solid rgba(255,255,255,.8);
+
+            position: absolute;
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,.18);
+
+            background: #ddd;
+        }
+
+        .person img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .person.one {
+            top: 35px;
+            left: 28%;
+        }
+
+        .person.two {
+            top: 100px;
+            right: 17%;
+        }
+
+        .person.three {
+            top: 125px;
+            left: 48%;
+        }
+
+        .person.four {
+            bottom: 42px;
+            left: 38%;
+        }
+
+
+        /* =====================================================
+           SERVICES SECTION
+        ===================================================== */
+
+        .services-section {
+            background: #f3f7f5;
+
+            padding: 55px 16px 70px;
+        }
+
+        .section-heading {
+            max-width: 1180px;
+            margin: 0 auto 25px;
+        }
+
+        .section-eyebrow {
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .section-heading h2 {
+            font-size: 32px;
+            font-weight: 400;
+
+            letter-spacing: -.8px;
+
+            margin-bottom: 7px;
+        }
+
+        .section-heading p {
+            color: #6d7673;
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           SERVICE CARDS
+        ===================================================== */
+
+        .service-grid {
+            max-width: 1180px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .service-card {
+            background: #30434d;
+
+            color: white;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            transition:
+                transform .2s,
+                box-shadow .2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,.12);
+        }
+
+        .service-image {
+            height: 170px;
+
+            overflow: hidden;
+
+            background: #ddd;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .service-card-content {
+            padding: 18px 24px 25px;
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+
+            font-weight: 400;
+
+            margin-bottom: 7px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+
+            line-height: 1.4;
+
+            color: #c7cfcc;
+
+            min-height: 58px;
+        }
+
+        .browse-link {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            font-size: 13px;
+
+            color: white;
+
+            text-decoration: underline;
+        }
+
+
+        /* =====================================================
+           HOW IT WORKS
+        ===================================================== */
+
+        .how-section {
+            background: #11201f;
+
+            color: white;
+
+            padding: 58px 23px 75px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .how-section::after {
+            content: "";
+
+            position: absolute;
+
+            width: 52px;
+            height: 70px;
+
+            right: 6%;
+            top: 0;
+
+            background: #233437;
+        }
+
+        .how-inner {
+            max-width: 1180px;
+
+            margin: auto;
+        }
+
+        .how-eyebrow {
+            color: #c3f57c;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            margin-bottom: 7px;
+        }
+
+        .how-section h2 {
+            font-size: 32px;
+
+            font-weight: 400;
+
+            margin-bottom: 7px;
+        }
+
+        .how-description {
+            color: #b6c0bd;
+
+            font-size: 14px;
+
+            margin-bottom: 50px;
+        }
+
+        .how-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 55px;
+        }
+
+        .how-item-icon {
+            width: 43px;
+            height: 43px;
+
+            background: #c8f57f;
+
+            color: #18251f;
+
+            border-radius: 11px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 20px;
+
+            margin-bottom: 18px;
+        }
+
+        .how-item h3 {
+            font-size: 20px;
+
+            font-weight: 400;
+
+            margin-bottom: 8px;
+        }
+
+        .how-item p {
+            color: #b7c0bd;
+
+            font-size: 14px;
+
+            line-height: 1.45;
+
+            max-width: 330px;
+        }
+
+
+        /* =====================================================
+           PARTNER TIERS
+        ===================================================== */
+
+        .tiers-section {
+            padding: 80px 23px;
+
+            background-color: #f2f7f5;
+
+            background-image:
+                linear-gradient(
+                    #dce7e4 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    #dce7e4 1px,
+                    transparent 1px
+                );
+
+            background-size: 75px 75px;
+        }
+
+        .tiers-inner {
+            max-width: 1180px;
+
+            margin: auto;
+        }
+
+        .tiers-eyebrow {
+            font-size: 12px;
+
+            margin-bottom: 8px;
+        }
+
+        .tiers-section h2 {
+            font-size: 32px;
+
+            font-weight: 400;
+
+            margin-bottom: 10px;
+        }
+
+        .tiers-description {
+            color: #68716e;
+
+            font-size: 14px;
+
+            max-width: 650px;
+
+            line-height: 1.5;
+
+            margin-bottom: 35px;
+        }
+
+        .tiers-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+        .tier-card {
+            background: white;
+
+            border: 1px solid #dce1df;
+
+            border-radius: 8px;
+
+            padding: 25px;
+
+            min-height: 200px;
+
+            box-shadow:
+                0 3px 10px rgba(0,0,0,.03);
+        }
+
+        .tier-card h3 {
+            font-size: 20px;
+
+            font-weight: 400;
+
+            margin-bottom: 10px;
+        }
+
+        .tier-card p {
+            font-size: 13px;
+
+            color: #66706d;
+
+            line-height: 1.5;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta-section {
+            background: #30434d;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 80px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: 34px;
+
+            font-weight: 400;
+
+            margin-bottom: 12px;
+        }
+
+        .cta-section p {
+            color: #c7cfcc;
+
+            margin-bottom: 25px;
+        }
+
+        .cta-button {
+            display: inline-block;
+
+            background: #c8f57f;
+
+            color: #17221e;
+
+            text-decoration: none;
+
+            padding: 13px 25px;
+
+            border-radius: 25px;
+
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #11201f;
+
+            color: white;
+
+            padding: 45px 23px;
+        }
+
+        .footer-inner {
+            max-width: 1180px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .footer-logo {
+            width: 135px;
+        }
+
+        .footer-logo img {
+            width: 135px;
+        }
+
+        .footer-text {
+            color: #aeb9b5;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .top-header {
+                gap: 15px;
+                padding: 0 15px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                padding: 50px 25px;
+
+                text-align: center;
+            }
+
+            .hero-content {
+                margin: auto;
+            }
+
+            .hero-search {
+                margin: auto;
+            }
+
+            .hero-graphic {
+                height: 330px;
+            }
+
+            .service-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .how-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tiers-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .top-header {
+                height: auto;
+
+                flex-wrap: wrap;
+
+                padding: 10px 15px;
+            }
+
+            .brand {
+                width: 120px;
+                min-width: 120px;
+            }
+
+            .brand img {
+                width: 120px;
+            }
+
+            .header-search {
+                order: 3;
+
+                flex-basis: 100%;
+
+                max-width: none;
+            }
+
+            .navigation {
+                padding: 0 15px;
+
+                gap: 20px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tiers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+
+                gap: 20px;
+
+                text-align: center;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="top-header">
+
+    <a href="#" class="brand">
+
+        <img src="https://cdn.shopify.com/b/shopify-brochure2-assets/08b278c519512d187520e1fe10b4f5b7.svg" alt="Shopify" class="h-7"
+        >
+
+    </a>
+
+
+    <div class="header-search">
+
+        <span class="search-symbol">⌕</span>
+
+        <input
+            type="text"
+            placeholder="Search by keyword, service, partner name, or country"
+        >
+
+    </div>
+
+
+    <button
+        class="login-button"
+        onclick="window.location.href='login.html'"
+    >
+        Log in
+    </button>
+
+</header>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav class="navigation">
+
+    <div class="navigation-item">
+        Browse
+        <span class="down-arrow"></span>
+    </div>
+
+    <div class="navigation-item">
+        Services
+        <span class="down-arrow"></span>
+    </div>
+
+    <div class="navigation-item">
+        Locations
+        <span class="down-arrow"></span>
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            SHOPIFY PARTNER DIRECTORY
+        </div>
+
+        <h1>
+            Do more, faster with<br>
+            a Shopify partner
+        </h1>
+
+        <p class="hero-description">
+            Hire partners who fit your needs and budget,
+            freeing you to focus on running your business.
+        </p>
+
+
+        <div class="hero-search">
+
+            <input
+                id="heroSearch"
+                type="text"
+                placeholder="Service, location, or keywords"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO GRAPHIC -->
+
+    <div class="hero-graphic">
+
+        <div class="graphic-circle"></div>
+
+        <div class="dots"></div>
+
+
+        <!-- These are demo people.
+             Replace the image URLs if you want your own images. -->
+
+        <div class="person one">
+
+            <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300"
+                alt=""
+            >
+
+        </div>
+
+
+        <div class="person two">
+
+            <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300"
+                alt=""
+            >
+
+        </div>
+
+
+        <div class="person three">
+
+            <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300"
+                alt=""
+            >
+
+        </div>
+
+
+        <div class="person four">
+
+            <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300"
+                alt=""
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="services-section">
+
+    <div class="section-heading">
+
+        <div class="section-eyebrow">
+            30+ SERVICES OFFERED
+        </div>
+
+        <h2>
+            Explore popular services
+        </h2>
+
+        <p>
+            Whether you need help with store setup,
+            design, marketing, or more, find partners
+            for every project.
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+        <!-- CARD 1 -->
+
+        <article class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900"
+                    alt="Store build"
+                >
+
+            </div>
+
+            <div class="service-card-content">
+
+                <h3>
+                    Store build or redesign
+                </h3>
+
+                <p>
+                    Set up a new Shopify store or redesign
+                    an existing one with options ranging
+                    from basic theme setup to custom solutions.
+                </p>
+
+                <a href="#" class="browse-link">
+                    Browse
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- CARD 2 -->
+
+        <article class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900"
+                    alt="Theme customization"
+                >
+
+            </div>
+
+            <div class="service-card-content">
+
+                <h3>
+                    Theme customization
+                </h3>
+
+                <p>
+                    Create custom pages and forms to personalize
+                    how customers discover and purchase your products.
+                </p>
+
+                <a href="#" class="browse-link">
+                    Browse
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- CARD 3 -->
+
+        <article class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=900"
+                    alt="Custom app integrations"
+                >
+
+            </div>
+
+            <div class="service-card-content">
+
+                <h3>
+                    Custom app integrations
+                </h3>
+
+                <p>
+                    Add features and functionality to your store
+                    that require custom code, a custom-built app,
+                    or connecting to other systems.
+                </p>
+
+                <a href="#" class="browse-link">
+                    Browse
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- CARD 4 -->
+
+        <article class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=900"
+                    alt="Troubleshooting"
+                >
+
+            </div>
+
+            <div class="service-card-content">
+
+                <h3>
+                    Troubleshooting
+                </h3>
+
+                <p>
+                    Fix Shopify store problems, bugs,
+                    integrations, and performance issues.
+                </p>
+
+                <a href="#" class="browse-link">
+                    Browse
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- CARD 5 -->
+
+        <article class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900"
+                    alt="SEO"
+                >
+
+            </div>
+
+            <div class="service-card-content">
+
+                <h3>
+                    Website audit and optimization
+                </h3>
+
+                <p>
+                    Improve your store's performance,
+                    SEO, conversion rate, and customer experience.
+                </p>
+
+                <a href="#" class="browse-link">
+                    Browse
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- CARD 6 -->
+
+        <article class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=900"
+                    alt="Product setup"
+                >
+
+            </div>
+
+            <div class="service-card-content">
+
+                <h3>
+                    Product and collection setup
+                </h3>
+
+                <p>
+                    Organize products, collections, menus,
+                    content, and other essential store elements.
+                </p>
+
+                <a href="#" class="browse-link">
+                    Browse
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section class="how-section">
+
+    <div class="how-inner">
+
+        <div class="how-eyebrow">
+            HOW IT WORKS
+        </div>
+
+        <h2>
+            Hire quickly with confidence
+        </h2>
+
+        <p class="how-description">
+            Partners listed in the directory work independently
+            to provide you with the best service.
+        </p>
+
+
+        <div class="how-grid">
+
+
+            <!-- BROWSE -->
+
+            <div class="how-item">
+
+                <div class="how-item-icon">
+                    ⌕
+                </div>
+
+                <h3>
+                    Browse
+                </h3>
+
+                <p>
+                    Refine your search based on what matters
+                    most to you, such as price, location,
+                    and services.
+                </p>
+
+            </div>
+
+
+            <!-- EVALUATE -->
+
+            <div class="how-item">
+
+                <div class="how-item-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    Evaluate
+                </h3>
+
+                <p>
+                    Check reviews, work samples,
+                    certifications, and more to make
+                    an informed choice.
+                </p>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="how-item">
+
+                <div class="how-item-icon">
+                    ☏
+                </div>
+
+                <h3>
+                    Contact and collaborate
+                </h3>
+
+                <p>
+                    Communicate directly with the partner,
+                    set your project terms, and start collaborating.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PARTNER TIERS
+===================================================== -->
+
+<section class="tiers-section">
+
+    <div class="tiers-inner">
+
+        <div class="tiers-eyebrow">
+            PARTNER TIERS
+        </div>
+
+        <h2>
+            Find experienced partners
+        </h2>
+
+        <p class="tiers-description">
+            Partner tiers help you understand the experience
+            and proven success of businesses listed in the directory.
+        </p>
+
+
+        <div class="tiers-grid">
+
+
+            <div class="tier-card">
+
+                <h3>
+                    Select
+                </h3>
+
+                <p>
+                    Partners with experience helping merchants
+                    build, improve, and grow their businesses.
+                </p>
+
+            </div>
+
+
+            <div class="tier-card">
+
+                <h3>
+                    Plus
+                </h3>
+
+                <p>
+                    Experienced partners with a strong history
+                    of successful Shopify projects.
+                </p>
+
+            </div>
+
+
+            <div class="tier-card">
+
+                <h3>
+                    Premier
+                </h3>
+
+                <p>
+                    Highly experienced partners with proven
+                    results across more complex projects.
+                </p>
+
+            </div>
+
+
+            <div class="tier-card">
+
+                <h3>
+                    Platinum
+                </h3>
+
+                <p>
+                    Top-tier partners with extensive experience
+                    and a strong record of successful projects.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta-section">
+
+    <h2>
+        Ready to grow your business?
+    </h2>
+
+    <p>
+        Find an experienced partner for your next project.
+    </p>
+
+    <a href="#" class="cta-button">
+        Browse partners
+    </a>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-logo">
+
+          <img src="https://cdn.shopify.com/b/shopify-brochure2-assets/08b278c519512d187520e1fe10b4f5b7.svg" alt="Shopify" class="h-7">
+            >
+
+        </div>
+
+        <div class="footer-text">
+            Partner directory
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    /* Header search */
+
+    const headerSearch =
+        document.querySelector(
+            '.header-search input'
+        );
+
+    headerSearch.addEventListener(
+        'keydown',
+        function(event) {
+
+            if (event.key === 'Enter') {
+
+                const value =
+                    this.value.trim();
+
+                if (value !== '') {
+
+                    document
+                        .getElementById('heroSearch')
+                        .value = value;
+
+                    document
+                        .querySelector('.services-section')
+                        .scrollIntoView({
+                            behavior: 'smooth'
+                        });
+
+                }
+
+            }
+
+        }
+    );
+
+
+    /* Hero search */
+
+    const heroSearch =
+        document.getElementById(
+            'heroSearch'
+        );
+
+    heroSearch.addEventListener(
+        'keydown',
+        function(event) {
+
+            if (event.key === 'Enter') {
+
+                if (this.value.trim() !== '') {
+
+                    document
+                        .querySelector('.services-section')
+                        .scrollIntoView({
+                            behavior: 'smooth'
+                        });
+
+                }
+
+            }
+
+        }
+    );
+
+
+    /* Login */
+
+    function login() {
+
+        alert(
+            'Login page coming soon.'
+        );
+
+    }
+
+</script>
+
+
+</body>
+</html>

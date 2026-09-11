@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Fabunmi Samuel George | Shopify Partners</title>
+
+
+    <!-- =================================================
+         FAVICON
+         Uses your Shopify Partners logo
+    ================================================== -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="shopify-partners.png"
+    >
+
+
+
+    <style>
+
+        /* =================================================
+           RESET
+        ================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #ffffff;
+
+            color: #172026;
+
+            font-size: 14px;
+
+        }
+
+
+        button,
+        input {
+
+            font-family: inherit;
+
+        }
+
+
+        /* =================================================
+           HEADER
+        ================================================== */
+
+        .header {
+
+            height: 59px;
+
+            background: #f3f7f5;
+
+            border-top:
+                3px solid #8ba3cf;
+
+            border-bottom:
+                1px solid #d5d9d7;
+
+            display: flex;
+
+            align-items: center;
+
+            padding:
+                0 10.5%;
+
+            gap: 35px;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+        }
+
+
+        /* =================================================
+           SHOPIFY PARTNERS LOGO
+        ================================================== */
+
+        .header-logo {
+
+            width: 135px;
+
+            min-width: 135px;
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
+
+        .header-logo img {
+
+            width: 135px;
+
+            height: auto;
+
+            display: block;
+
+            object-fit: contain;
+
+        }
+
+
+        /* =================================================
+           SEARCH
+        ================================================== */
+
+        .search {
+
+            height: 37px;
+
+            flex: 1;
+
+            max-width: 680px;
+
+            background: white;
+
+            border:
+                1px solid #858e8b;
+
+            border-radius: 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 0 14px;
+
+        }
+
+
+        .search-icon {
+
+            font-size: 20px;
+
+            color: #59625f;
+
+            margin-right: 9px;
+
+        }
+
+
+        .search input {
+
+            width: 100%;
+
+            border: none;
+
+            outline: none;
+
+            font-size: 13px;
+
+            color: #333;
+
+        }
+
+
+        .search input::placeholder {
+
+            color: #858d8a;
+
+        }
+
+
+        /* =================================================
+           LOGIN
+        ================================================== */
+
+        .login {
+
+            background: #30434d;
+
+            color: white;
+
+            padding:
+                9px 20px;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            white-space: nowrap;
+
+        }
+
+
+        .login:hover {
+
+            background: #25363f;
+
+        }
+
+
+        /* =================================================
+           NAVIGATION
+        ================================================== */
+
+        .nav {
+
+            height: 55px;
+
+            background: #f3f7f5;
+
+            border-bottom:
+                1px solid #d5d9d7;
+
+            display: flex;
+
+            align-items: center;
+
+            padding-left: 10.5%;
+
+            gap: 32px;
+
+        }
+
+
+        .nav-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            cursor: pointer;
+
+        }
+
+
+        .arrow {
+
+            width: 7px;
+
+            height: 7px;
+
+            border-right:
+                1px solid #172026;
+
+            border-bottom:
+                1px solid #172026;
+
+            transform:
+                rotate(45deg);
+
+            margin-top: -4px;
+
+        }
+
+
+        /* =================================================
+           MAIN CONTAINER
+        ================================================== */
+
+        .container {
+
+            width: 1065px;
+
+            max-width:
+                calc(100% - 40px);
+
+            margin: 0 auto;
+
+            padding-top: 95px;
+
+            padding-bottom: 100px;
+
+        }
+
+
+        .profile-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                385px 1fr;
+
+            gap: 52px;
+
+            align-items: start;
+
+        }
+
+
+        /* =================================================
+           LEFT PARTNER CARD
+        ================================================== */
+
+        .profile-card {
+
+            width: 385px;
+
+            background: white;
+
+            border:
+                1px solid #e0e4e2;
+
+            border-radius: 7px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,.06);
+
+            padding:
+                76px 18px 20px;
+
+            position: relative;
+
+        }
+
+
+        /* =================================================
+           IT-GEEKS LOGO
+        ================================================== */
+
+        .partner-image {
+
+            width: 122px;
+
+            height: 122px;
+
+            position: absolute;
+
+            top: -61px;
+
+            left: 18px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            background: #ddd;
+
+            box-shadow:
+                0 3px 9px
+                rgba(0,0,0,.15);
+
+        }
+
+
+        .partner-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+        }
+
+
+        /* =================================================
+           PLATINUM BADGE
+        ================================================== */
+
+        .platinum {
+
+            position: absolute;
+
+            top: 19px;
+
+            right: 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+        }
+
+
+        .platinum-icon {
+
+            width: 28px;
+
+            height: 28px;
+
+            background: #050505;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-weight: bold;
+
+            font-size: 15px;
+
+        }
+
+
+        .platinum-text {
+
+            font-size: 7px;
+
+            line-height: 1.1;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .platinum-text strong {
+
+            display: block;
+
+            font-size: 8px;
+
+        }
+
+
+        /* =================================================
+           NAME
+        ================================================== */
+
+        .profile-card h1 {
+
+            font-size: 25px;
+
+            font-weight: 400;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        /* =================================================
+           SERVICE PARTNER
+        ================================================== */
+
+        .type {
+
+            display: inline-block;
+
+            border:
+                1px solid #8b9591;
+
+            border-radius: 15px;
+
+            padding:
+                5px 9px;
+
+            font-size: 10px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        /* =================================================
+           RATING
+        ================================================== */
+
+        .rating {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            margin-bottom: 15px;
+
+            font-size: 12px;
+
+        }
+
+
+        .star {
+
+            color: #f5b83d;
+
+            font-size: 18px;
+
+        }
+
+
+        .rating-divider {
+
+            width: 1px;
+
+            height: 18px;
+
+            background: #adb4b1;
+
+            margin:
+                0 2px;
+
+        }
+
+
+        .person-icon {
+
+            color: #87939a;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =================================================
+           CONTACT BUTTON
+        ================================================== */
+
+        .contact {
+
+            width: 100%;
+
+            border: 0;
+
+            background: #30434d;
+
+            color: white;
+
+            padding: 12px;
+
+            border-radius: 25px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .contact:hover {
+
+            background: #25363f;
+
+        }
+
+
+        .divider {
+
+            height: 1px;
+
+            background: #dfe3e1;
+
+            margin-bottom: 16px;
+
+        }
+
+
+        /* =================================================
+           CARD TEXT
+        ================================================== */
+
+        .card-title {
+
+            font-size: 15px;
+
+            font-weight: 400;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .card-text {
+
+            font-size: 10px;
+
+            color: #4f5955;
+
+            margin-bottom: 17px;
+
+        }
+
+
+        /* =================================================
+           CONTACT INFORMATION
+        ================================================== */
+
+        .contact-info {
+
+            margin-bottom: 17px;
+
+        }
+
+
+        .info {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            font-size: 10px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .info-icon {
+
+            width: 15px;
+
+            color: #7d8990;
+
+        }
+
+
+        .info a {
+
+            color: #263f63;
+
+            text-decoration: none;
+
+        }
+
+
+        /* =================================================
+           LOCATION
+        ================================================== */
+
+        .location {
+
+            margin-bottom: 16px;
+
+        }
+
+
+        .location h3 {
+
+            font-size: 12px;
+
+            font-weight: 400;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .location p {
+
+            font-size: 10px;
+
+            color: #4f5955;
+
+        }
+
+
+        /* =================================================
+           RIGHT CONTENT
+        ================================================== */
+
+        .content {
+
+            min-width: 0;
+
+        }
+
+
+        .content > h2 {
+
+            font-size: 22px;
+
+            font-weight: 400;
+
+            margin-bottom: 23px;
+
+        }
+
+
+        .content-section {
+
+            margin-bottom: 27px;
+
+        }
+
+
+        .content-section h3 {
+
+            font-size: 18px;
+
+            font-weight: 400;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .content-section p {
+
+            color: #626b68;
+
+            font-size: 14px;
+
+            line-height: 1.45;
+
+            max-width: 660px;
+
+        }
+
+
+        /* =================================================
+           SPECIALIZED SERVICES
+        ================================================== */
+
+        .services-title {
+
+            font-size: 18px;
+
+            font-weight: 400;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .service-list {
+
+            width: 100%;
+
+            max-width: 615px;
+
+        }
+
+
+        .service {
+
+            border-bottom:
+                1px solid #dce1df;
+
+            min-height: 43px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            font-size: 13px;
+
+            cursor: pointer;
+
+        }
+
+
+        .service-name {
+
+            font-weight: 600;
+
+        }
+
+
+        .plus,
+        .minus {
+
+            width: 18px;
+
+            height: 18px;
+
+            border-radius: 50%;
+
+            background: #30434d;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+        }
+
+
+        /* =================================================
+           SERVICE DETAILS
+        ================================================== */
+
+        .service-details {
+
+            display: none;
+
+            padding:
+                0 0 25px;
+
+            color: #626b68;
+
+            font-size: 14px;
+
+            line-height: 1.4;
+
+        }
+
+
+        .service.open .service-details {
+
+            display: block;
+
+        }
+
+
+        .service-details .description {
+
+            margin-top: 15px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .service-details ul {
+
+            padding-left: 20px;
+
+            margin-top: 5px;
+
+        }
+
+
+        .service-details li {
+
+            margin-bottom: 5px;
+
+        }
+
+
+        /* =================================================
+           OTHER SERVICES
+        ================================================== */
+
+        .other {
+
+            margin-top: 27px;
+
+            max-width: 650px;
+
+        }
+
+
+        .other h3 {
+
+            font-size: 18px;
+
+            font-weight: 400;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .other p {
+
+            color: #626b68;
+
+            line-height: 1.45;
+
+            font-size: 14px;
+
+        }
+
+
+        .more {
+
+            display: block;
+
+            color: #4b5960;
+
+            text-decoration: underline;
+
+            margin-top: 4px;
+
+        }
+
+
+        /* =================================================
+           INDUSTRIES
+        ================================================== */
+
+        .industries {
+
+            margin-top: 29px;
+
+            max-width: 650px;
+
+        }
+
+
+        .industries h3 {
+
+            font-size: 18px;
+
+            font-weight: 400;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .industries p {
+
+            color: #626b68;
+
+            font-size: 14px;
+
+            line-height: 1.4;
+
+        }
+
+
+        /* =================================================
+           FEATURED WORK
+        ================================================== */
+
+        .featured {
+
+            margin-top: 34px;
+
+            max-width: 650px;
+
+        }
+
+
+        .featured h2 {
+
+            font-size: 18px;
+
+            font-weight: 400;
+
+            margin-bottom: 17px;
+
+        }
+
+
+        .work {
+
+            margin-bottom: 24px;
+
+        }
+
+
+        .work h3 {
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .work p {
+
+            color: #626b68;
+
+            font-size: 14px;
+
+            line-height: 1.4;
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .work a {
+
+            color: #5785c5;
+
+            text-decoration: underline;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =================================================
+           MOBILE
+        ================================================== */
+
+        @media(max-width: 1000px) {
+
+            .header {
+
+                padding:
+                    0 25px;
+
+            }
+
+
+            .nav {
+
+                padding-left: 25px;
+
+            }
+
+
+            .container {
+
+                width: 900px;
+
+            }
+
+        }
+
+
+        @media(max-width: 750px) {
+
+            .header {
+
+                height: auto;
+
+                padding:
+                    10px 15px;
+
+                flex-wrap: wrap;
+
+            }
+
+
+            .header-logo {
+
+                width: 135px;
+
+            }
+
+
+            .search {
+
+                order: 3;
+
+                flex-basis: 100%;
+
+                max-width: none;
+
+            }
+
+
+            .nav {
+
+                padding-left: 15px;
+
+                gap: 20px;
+
+            }
+
+
+            .container {
+
+                width: auto;
+
+                max-width:
+                    calc(100% - 30px);
+
+                padding-top: 75px;
+
+            }
+
+
+            .profile-layout {
+
+                display: block;
+
+            }
+
+
+            .profile-card {
+
+                width: 100%;
+
+                margin-bottom: 70px;
+
+            }
+
+
+            .service-list {
+
+                max-width: none;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="header">
+
+
+    <!-- SHOPIFY PARTNERS LOGO -->
+
+    <div class="header-logo">
+<img src="https://cdn.shopify.com/b/shopify-brochure2-assets/08b278c519512d187520e1fe10b4f5b7.svg" alt="Shopify" class="h-7">
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search">
+
+        <span class="search-icon">
+            ⌕
+        </span>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by keyword, service, partner name, or country"
+        >
+
+    </div>
+
+
+    <!-- LOGIN -->
+
+    <a
+        href="#"
+        class="login"
+    >
+        Log in
+    </a>
+
+
+</header>
+
+
+<!-- =====================================================
+     NAVIGATION
+====================================================== -->
+
+<nav class="nav">
+
+
+    <div class="nav-item">
+
+        Browse
+
+        <span class="arrow"></span>
+
+    </div>
+
+
+    <div class="nav-item">
+
+        Services
+
+        <span class="arrow"></span>
+
+    </div>
+
+
+    <div class="nav-item">
+
+        Locations
+
+        <span class="arrow"></span>
+
+    </div>
+
+
+</nav>
+
+
+
+<!-- =====================================================
+     MAIN PAGE
+====================================================== -->
+
+<main class="container">
+
+
+<div class="profile-layout">
+
+
+
+<!-- =====================================================
+     LEFT PROFILE CARD
+====================================================== -->
+
+<aside class="profile-card">
+
+
+    <!-- IT-GEEKS IMAGE -->
+
+    <div class="partner-image">
+
+        <img src="https://www.insightdesigns.com/wp-content/uploads/2022/11/Shopify-Certified-Partner-Logo.png"
+        >
+
+    </div>
+
+
+
+    <!-- PLATINUM PARTNER -->
+
+    <div class="platinum">
+
+        <div class="platinum-icon">
+            S
+        </div>
+
+        <div class="platinum-text">
+
+            SHOPIFY
+
+            <strong>
+                PLATINUM
+            </strong>
+
+            PARTNER
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NAME -->
+
+    <h1>
+        Fabunmi Samuel George
+    </h1>
+
+
+
+    <!-- SERVICE PARTNER -->
+
+    <div class="type">
+        Service partner
+    </div>
+
+
+
+    <!-- RATING -->
+
+    <div class="rating">
+
+        <span class="star">
+            ★
+        </span>
+
+        <span>
+            5.0 (5057)
+        </span>
+
+        <span class="rating-divider"></span>
+
+        <span class="person-icon">
+            ♟
+        </span>
+
+        <span>
+            Partner since September 2015
+        </span>
+
+    </div>
+
+
+
+    <!-- CONTACT BUTTON -->
+
+    <button
+        class="contact"
+        onclick="contactPartner()"
+    >
+        Contact
+    </button>
+
+
+
+    <div class="divider"></div>
+
+
+
+    <!-- PRICE -->
+
+    <h3 class="card-title">
+
+        Price range for selected services
+
+    </h3>
+
+
+    <p class="card-text">
+
+        Starting from $1000
+
+    </p>
+
+
+
+    <!-- CONTACT INFORMATION -->
+
+    <div class="contact-info">
+
+
+        <h3 class="card-title">
+
+            Contact information
+
+        </h3>
+
+
+        <div class="info">
+
+            <span class="info-icon">
+                🔗
+            </span>
+
+            <a href="#">
+                itgeeks.com
+            </a>
+
+        </div>
+
+
+        <div class="info">
+
+            <span class="info-icon">
+                ☎
+            </span>
+
+            <span>
+                3852402913
+            </span>
+
+        </div>
+
+
+        <div class="info">
+
+            <span class="info-icon">
+                ✉
+            </span>
+
+            <a href="#">
+                sales@itgeeks.com
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- PRIMARY LOCATION -->
+
+    <div class="location">
+
+        <h3>
+            Primary location
+        </h3>
+
+        <p>
+            SALT LAKE CITY, United States
+        </p>
+
+    </div>
+
+
+
+    <!-- SUPPORTED LOCATIONS -->
+
+    <div class="location">
+
+        <h3>
+            Supported locations
+        </h3>
+
+        <p>
+            United States, Canada
+        </p>
+
+    </div>
+
+
+
+    <!-- LANGUAGES -->
+
+    <div class="location">
+
+        <h3>
+            Languages
+        </h3>
+
+        <p>
+            English
+        </p>
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     RIGHT SIDE
+====================================================== -->
+
+<section class="content">
+
+
+    <!-- ABOUT -->
+
+    <h2>
+        About
+    </h2>
+
+
+
+    <!-- BUSINESS DESCRIPTION -->
+
+    <div class="content-section">
+
+        <h3>
+            Business description
+        </h3>
+
+
+        <p>
+
+            Fabunmi Samuel George is a Shopify Platinum Partner with
+            5000+ 5-star reviews and 10,000+ successful
+            projects. We specialize in scalable Shopify
+            Plus builds, high-performance custom apps,
+            migrations, CRO, and enterprise-grade
+            solutions to help D2C and B2B brands grow.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- PLATINUM PARTNER -->
+
+    <div class="content-section">
+
+        <h3>
+            Platinum Partner
+        </h3>
+
+
+        <p>
+
+            Partners are tiered based on multiple factors,
+            including their history of experience and proven
+            success on Shopify.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         SPECIALIZED SERVICES
+    ================================================== -->
+
+    <div>
+
+        <h3 class="services-title">
+            Specialized services
+        </h3>
+
+
+        <div class="service-list">
+
+
+            <!-- STORE BUILD -->
+
+            <div class="service">
+
+                <span class="service-name">
+                    Store build or redesign
+                </span>
+
+                <span class="plus">
+                    +
+                </span>
+
+            </div>
+
+
+
+            <!-- STORE MIGRATION -->
+
+            <div class="service">
+
+                <span class="service-name">
+                    Store migration
+                </span>
+
+                <span class="plus">
+                    +
+                </span>
+
+            </div>
+
+
+
+            <!-- TROUBLESHOOTING -->
+
+            <div class="service open">
+
+                <div style="width:100%;">
+
+
+                    <div
+                        class="service-header"
+                        style="
+                        min-height:43px;
+                        display:flex;
+                        align-items:center;
+                        justify-content:space-between;
+                        "
+                    >
+
+                        <span class="service-name">
+                            Troubleshooting
+                        </span>
+
+
+                        <span class="minus">
+                            −
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- TROUBLESHOOTING CONTENT -->
+
+                    <div class="service-details">
+
+
+                        <p class="description">
+
+                            Contact for pricing
+
+                        </p>
+
+
+                        <p class="description">
+
+                            <strong>
+                                Description:
+                            </strong>
+
+                            <br>
+
+                            Facing difficulty in your Shopify
+                            store? Unable to catch the bugs?
+                            Leave it to us...
+
+                        </p>
+
+
+                        <p>
+                            Services offered:
+                        </p>
+
+
+                        <ul>
+
+                            <li>
+                                Troubleshooting app integration issues
+                            </li>
+
+                            <li>
+                                Tweak features or functionalities
+                            </li>
+
+                            <li>
+                                Troubleshooting social media
+                                integration issues
+                            </li>
+
+                            <li>
+                                Custom product options bug fixing
+                            </li>
+
+                            <li>
+                                Theme bug fixing
+                            </li>
+
+                            <li>
+                                Ajax add to cart / quick view /
+                                Ajax search / add to cart pop up /
+                                advance swatches bug fixing
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- THEME CUSTOMIZATION -->
+
+            <div class="service">
+
+                <span class="service-name">
+                    Theme customization
+                </span>
+
+                <span class="plus">
+                    +
+                </span>
+
+            </div>
+
+
+
+            <!-- SEO -->
+
+            <div class="service">
+
+                <span class="service-name">
+                    SEO
+                </span>
+
+                <span class="plus">
+                    +
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         OTHER SERVICES
+    ================================================== -->
+
+    <div class="other">
+
+
+        <h3>
+            Other services
+        </h3>
+
+
+        <p>
+
+            Product and collection setup, Custom apps and
+            integrations, Conversion rate optimization,
+            Search engine advertising, Banner ads, Site
+            performance and speed
+
+        </p>
+
+
+        <a
+            href="#"
+            class="more"
+        >
+            More services
+        </a>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         INDUSTRIES
+    ================================================== -->
+
+    <div class="industries">
+
+
+        <h3>
+            Industries
+        </h3>
+
+
+        <p>
+
+            Business to business (B2B), Clothing and fashion,
+            Health and beauty, Jewelry and accessories
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         FEATURED WORK
+    ================================================== -->
+
+    <div class="featured">
+
+
+        <h2>
+            Featured work
+        </h2>
+
+
+
+        <!-- WORK 1 -->
+
+        <div class="work">
+
+            <h3>
+
+                CrownBees: BigCommerce to Shopify PLUS Migration
+
+            </h3>
+
+
+            <p>
+
+                We seamlessly migrated CrownBees from BigCommerce
+                to Shopify PLUS, creating both a Direct-to-Consumer
+                (D2C) and a dedicated B2B store. Leveraging Shopify
+                Plus's advanced multi-store capabilities, we handled
+                data migration for thousands of SKUs, preserved SEO
+                rankings, and integrated AVALARA, MRP Easy ERP,
+                and Zoho CRM for streamlined tax, inventory, and
+                customer relationship management.
+
+            </p>
+
+
+            <a href="#">
+                View featured work ↗
+            </a>
+
+        </div>
+
+
+
+        <!-- WORK 2 -->
+
+        <div class="work">
+
+            <h3>
+
+                Reuzel: Website Redesign, B2B Development & Global Expansion
+
+            </h3>
+
+
+            <p>
+
+                Reuzel's Shopify V2.0 migration included a complete
+                website redesign focused on driving conversions.
+                We built a custom B2B portal leveraging Shopify
+                PLUS's exclusive features, and expanded their global
+                presence with French and German stores, and conducted
+                an app audit to enhance functionality and user experience.
+
+            </p>
+
+
+            <a href="#">
+                View featured work ↗
+            </a>
+
+        </div>
+
+
+
+        <!-- WORK 3 -->
+
+        <div class="work">
+
+            <h3>
+
+                TrailsGridPro: WooCommerce to Shopify PLUS Migration
+
+            </h3>
+
+
+            <p>
+
+                We switched TrailGridPro from WooCommerce to
+                Shopify PLUS, transforming their store with a
+                sleek, conversion-optimized design. We created
+                expansion stores and restructured their platform
+                to 2.5x website performance. Leveraging Shopify's
+                API and dynamic capabilities, we enhanced KPIs
+                like CTR and SEO. Custom features and a tailored
+                user experience now drive engagement and
+                long-term success.
+
+            </p>
+
+
+            <a href="#">
+                View featured work ↗
+            </a>
+
+        </div>
+
+
+
+        <!-- WORK 4 -->
+
+        <div class="work">
+
+            <h3>
+
+                GreenBeaver: Conversion-Focused Redesign & Global Expansion
+
+            </h3>
+
+
+            <p>
+
+                We revamped GreenBeaver's website with a
+                CRO-focused design, ensuring optimal user
+                experience and improved conversion performance.
+                The project included Shopify PLUS migration,
+                international expansion, and custom ecommerce
+                functionality.
+
+            </p>
+
+
+            <a href="#">
+                View featured work ↗
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+</div>
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+
+/* =====================================================
+   CONTACT BUTTON
+====================================================== */
+
+function contactPartner() {
+
+    alert(
+        "Contact Fabunmi Samuel George"
+    );
+
+}
+
+
+
+/* =====================================================
+   SERVICE ACCORDION
+====================================================== */
+
+const services =
+    document.querySelectorAll(".service");
+
+
+services.forEach(service => {
+
+
+    service.addEventListener(
+        "click",
+        function(event) {
+
+
+            /*
+             Don't toggle when clicking
+             inside the description.
+            */
+
+            if (
+                event.target.closest(
+                    ".service-details"
+                )
+            ) {
+
+                return;
+
+            }
+
+
+            const details =
+                this.querySelector(
+                    ".service-details"
+                );
+
+
+            if (!details) {
+
+                return;
+
+            }
+
+
+            this.classList.toggle(
+                "open"
+            );
+
+
+            const icon =
+                this.querySelector(
+                    ".minus"
+                );
+
+
+            if (icon) {
+
+                if (
+                    this.classList.contains(
+                        "open"
+                    )
+                ) {
+
+                    icon.textContent = "−";
+
+                } else {
+
+                    icon.textContent = "+";
+
+                }
+
+            }
+
+        }
+    );
+
+});
+
+
+
+/* =====================================================
+   SEARCH
+====================================================== */
+
+const searchInput =
+    document.getElementById(
+        "searchInput"
+    );
+
+
+searchInput.addEventListener(
+    "keyup",
+    function() {
+
+        console.log(
+            "Search:",
+            this.value
+        );
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>
